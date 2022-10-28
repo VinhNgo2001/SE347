@@ -4,7 +4,6 @@
     align-items: center;
 }
 .container {
-    width: 1600px;
+    width: var(--default-layout-header-width);
     min-height: 1000px;
-    background-color: #333;
 }
