@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faLanguage, faHome } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 const cx = classNames.bind(styles);
@@ -10,19 +10,30 @@ function Header() {
             <div className={cx('inner')}>
                 <div className={cx('faci-nav')}>
                     <div className={cx('search')}>
-                        <input placeholder="tiem kiem" spellCheck={false} />
+                        <input placeholder="tim kiem" spellCheck={false} />
                         <button className={cx('clear')}>
-                            <FontAwesomeIcon className={cx('loading')} icon={faCircleXmark} />
+                            <FontAwesomeIcon icon={faSpinner} />
                         </button>
-                        <FontAwesomeIcon icon={faSpinner} />
+                        <FontAwesomeIcon className={cx('loading')} icon={faCircleXmark} />
+
                         <button className={cx('search-btn')}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>
                     </div>
+                    <button className={cx('en-btn')}>
+                        <FontAwesomeIcon icon={faLanguage} />
+                    </button>
                 </div>
-                <div className={cx('nav')}>
-                    <div className={cx('logo')}>
-                        <img src={images.logo} />
+                <div className={cx('navigation')}>
+                    <div className={cx('logo')}>logo</div>
+                    <button className={cx('home-btn')}>
+                        <FontAwesomeIcon icon={faHome} />
+                    </button>
+                    <div className={cx('nav')}>
+                        <button className={cx('')}>Phim</button>
+                        <button className={cx('')}>Lich chieu</button>
+                        <button className={cx('')}>Rap va gia</button>
+                        <button className={cx('')}>Ho tro</button>
                     </div>
                 </div>
             </div>
