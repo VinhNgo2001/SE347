@@ -1,5 +1,5 @@
 function Lichchieu() {
-    return <h2>Lichchieu page</h2>;
+    return <h1>Lichchieu page</h1>;
 }
 
 export default Lichchieu;

@@ -1,5 +1,5 @@
 function Phim() {
-    return <h2>Phim page</h2>;
+    return <h1>Phim page</h1>;
 }
 
 export default Phim;

@@ -1,4 +1,4 @@
 const images = {
-    logo: require('~/assets/images/house-user-solid.svg').default,
+    logo: require('~/assets/images/logo-meoden.png').default,
 };
 export default images;
