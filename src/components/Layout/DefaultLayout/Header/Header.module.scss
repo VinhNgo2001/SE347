@@ -29,10 +29,14 @@
     justify-content: right;
     padding: 10px 10px;
 }
+.search,
+.search-result {
+    width: 310px;
+}
 
 .search {
     position: relative;
-    width: 310px;
+
     height: 42px;
     color: #d1d1d1;
     background-color: black;
@@ -49,6 +53,10 @@
         background-color: black;
     }
 }
+.search-result {
+    padding-left: 35px;
+}
+
 input:not(:placeholder-shown) ~ .search-btn {
     color: rgba(131, 62, 40, 0.75);
 }

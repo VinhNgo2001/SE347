@@ -1,0 +1,13 @@
+.wrapper {
+    align-items: center;
+}
+.name {
+    padding-left: 20px;
+    font-size: 1p6rem;
+    font-weight: 300;
+    color: black;
+
+    &:hover {
+        background: rgba(11, 11, 19, 0.3);
+    }
+}
