@@ -6,6 +6,7 @@ import 'tippy.js/dist/tippy.css';
 import Tippy from '@tippyjs/react/headless';
 import styles from './Header.module.scss';
 import { Wrapper as PopupWrapper } from '~/components/Popper';
+import Button from '~/components/Button';
 import ResultSearch from '~/components/ResultSearch';
 import images from '~/assets/images';
 const cx = classNames.bind(styles);
@@ -19,7 +20,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}></div>
+                <div className={cx('logo')}>
+                    <h2>Logo</h2>
+                </div>
                 <div className={cx('right-header')}>
                     <div className={cx('facilities-nav')}>
                         <div className={cx('search')}>
@@ -28,11 +31,9 @@ function Header() {
                                 visible={searchResult.length > 0}
                                 render={(attrs) => (
                                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                                        <PopupWrapper>
+                                        {/* <PopupWrapper>
                                             <ResultSearch></ResultSearch>
-                                            <ResultSearch></ResultSearch>
-                                            <ResultSearch></ResultSearch>
-                                        </PopupWrapper>
+                                        </PopupWrapper> */}
                                     </div>
                                 )}
                             >
@@ -47,9 +48,7 @@ function Header() {
                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </button>
                         </div>
-                        <button className={cx('en-btn')}>
-                            <FontAwesomeIcon icon={faLanguage} />
-                        </button>
+                        <Button primary>EN</Button>
                     </div>
                     <div className={cx('navigation')}>
                         <button className={cx('home-btn')}>
@@ -58,29 +57,29 @@ function Header() {
                         <div className={cx('nav')}>
                             <ul>
                                 <li>
-                                    <a href={'/phim'}>
-                                        <h2>Phim</h2>
-                                    </a>
+                                    <Button to="/phim" textH>
+                                        Phim
+                                    </Button>
                                 </li>
                                 <li>
-                                    <a href={'/lichchieu'}>
-                                        <h2>lich chieu</h2>
-                                    </a>
+                                    <Button to="/lichchieu" text>
+                                        lich chieu
+                                    </Button>
                                 </li>
                                 <li>
-                                    <a href={'/rapvagia'}>
-                                        <h2>Rap va gia</h2>
-                                    </a>
+                                    <Button to="/hotro" text>
+                                        Rap gia
+                                    </Button>
                                 </li>
                                 <li>
-                                    <a href={'/gioithieu'}>
-                                        <h2>Gioi thieu</h2>
-                                    </a>
+                                    <Button to="/hotro" text>
+                                        Gioithieu
+                                    </Button>
                                 </li>
                                 <li>
-                                    <a href={'/hotro'}>
-                                        <h2>Ho tro</h2>
-                                    </a>
+                                    <Button to="/hotro" text>
+                                        Ho tro
+                                    </Button>
                                 </li>
                             </ul>
                         </div>

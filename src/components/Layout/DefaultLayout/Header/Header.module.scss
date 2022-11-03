@@ -101,7 +101,6 @@ input:not(:placeholder-shown) ~ .search-btn {
     border-radius: 92px;
     display: inline-block;
     vertical-align: middle;
-    background-color: #e00d7a;
 }
 ol,
 ul {
@@ -109,9 +108,5 @@ ul {
 }
 .nav li {
     float: left;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-h2 {
-    color: white;
+    display: block;
 }
