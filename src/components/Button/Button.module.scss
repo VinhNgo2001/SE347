@@ -10,6 +10,11 @@
     cursor: pointer;
 }
 .primary {
+    padding: 10px;
+    margin-left: 10px;
+    height: 100%;
+    color: #fff;
+    font-size: 1.8rem;
     background-color: #ba3469;
     &:hover {
         color: white;
@@ -18,7 +23,7 @@
 }
 .text {
     height: 100%;
-    width: 100px;
+    width: 150px;
     font-size: 24px;
     border-radius: 0px;
 
@@ -30,11 +35,25 @@
 }
 .textH {
     height: 100%;
-    width: 100px;
+    width: 150px;
     font-size: 24px;
     border-radius: 0px;
     border-top-left-radius: 92px;
     border-bottom-left-radius: 92px;
+
+    background-color: #ba3469;
+
+    &:hover {
+        background: #f2b819;
+    }
+}
+.textF {
+    height: 100%;
+    width: 150px;
+    font-size: 24px;
+    border-radius: 0px;
+    border-bottom-right-radius: 92px;
+    border-top-right-radius: 92px;
 
     background-color: #ba3469;
 

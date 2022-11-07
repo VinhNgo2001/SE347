@@ -1,8 +1,9 @@
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass, faLanguage, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faUser, faHome } from '@fortawesome/free-solid-svg-icons';
 import 'tippy.js/dist/tippy.css';
+
 import Tippy from '@tippyjs/react/headless';
 import styles from './Header.module.scss';
 import { Wrapper as PopupWrapper } from '~/components/Popper';
@@ -39,16 +40,27 @@ function Header() {
                             >
                                 <input placeholder="tim kiem" spellCheck={false} />
                             </Tippy>
-                            <button className={cx('clear')}>
+                            {/* <button className={cx('clear')}>
                                 <FontAwesomeIcon icon={faSpinner} />
-                            </button>
+                            </button> */}
                             <FontAwesomeIcon className={cx('loading')} icon={faCircleXmark} />
 
-                            <button className={cx('search-btn')}>
-                                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                            </button>
+                            <Tippy>
+                                <button className={cx('search-btn')}>
+                                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                </button>
+                            </Tippy>
                         </div>
-                        <Button primary>EN</Button>
+
+                        <div className={cx('login')}>
+                            <FontAwesomeIcon icon={faUser} />
+
+                            <Button primary to="/dangnhap">
+                                Dang nhap
+                            </Button>
+                        </div>
+
+                        {/* <Button primary>EN</Button> */}
                     </div>
                     <div className={cx('navigation')}>
                         <button className={cx('home-btn')}>
@@ -73,11 +85,16 @@ function Header() {
                                 </li>
                                 <li>
                                     <Button to="/hotro" text>
-                                        Gioithieu
+                                        Gioi thieu
                                     </Button>
                                 </li>
                                 <li>
                                     <Button to="/hotro" text>
+                                        Gioi thieu
+                                    </Button>
+                                </li>
+                                <li>
+                                    <Button to="/hotro" textF>
                                         Ho tro
                                     </Button>
                                 </li>

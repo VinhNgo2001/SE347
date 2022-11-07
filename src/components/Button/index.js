@@ -2,7 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
-function Button({ to, href, primary = false, text = false, textH = false, children, onClick }) {
+function Button({ to, href, primary = false, text = false, textH = false, textF = false, children, onClick }) {
     let Comp = 'button';
 
     const props = {
@@ -15,7 +15,7 @@ function Button({ to, href, primary = false, text = false, textH = false, childr
         props.href = href;
         Comp = 'a';
     }
-    const classes = cx('wrapper', { primary, text, textH });
+    const classes = cx('wrapper', { primary, text, textH, textF });
     return (
         <Comp className={classes} {...props}>
             <span>{children}</span>
