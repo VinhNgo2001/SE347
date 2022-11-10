@@ -10,14 +10,18 @@
     width: var(--default-layout-header-width);
     background-color: grey;
 }
-.logo {
-    width: 30%;
+.left-header {
+    width: 20%;
     height: 100%;
-    background-color: blue;
+
     float: left;
 }
+.logo {
+    display: flex;
+    justify-content: center;
+}
 .right-header {
-    width: 70%;
+    width: 80%;
     height: 100%;
 
     float: left;
@@ -96,6 +100,7 @@ input:not(:placeholder-shown) ~ .search-btn {
     height: 100%;
     width: 50px;
     border-radius: 92px;
+    margin-right: 20px;
 }
 .nav {
     width: 910px;

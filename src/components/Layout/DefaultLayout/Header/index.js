@@ -21,8 +21,10 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
-                    <h2>Logo</h2>
+                <div className={cx('left-header')}>
+                    <div className={cx('logo')}>
+                        <img src={images.logo} height={110} />
+                    </div>
                 </div>
                 <div className={cx('right-header')}>
                     <div className={cx('facilities-nav')}>
@@ -38,7 +40,7 @@ function Header() {
                                     </div>
                                 )}
                             >
-                                <input placeholder="tim kiem" spellCheck={false} />
+                                <input placeholder="Tìm kiếm..." spellCheck={false} />
                             </Tippy>
                             {/* <button className={cx('clear')}>
                                 <FontAwesomeIcon icon={faSpinner} />
@@ -56,46 +58,48 @@ function Header() {
                             <FontAwesomeIcon icon={faUser} />
 
                             <Button primary to="/dangnhap">
-                                Dang nhap
+                                Đăng nhập
                             </Button>
                         </div>
 
                         {/* <Button primary>EN</Button> */}
                     </div>
                     <div className={cx('navigation')}>
-                        <button className={cx('home-btn')}>
-                            <FontAwesomeIcon icon={faHome} />
-                        </button>
+                        <div className={cx('home-btn')}>
+                            <Button primary>
+                                <FontAwesomeIcon icon={faHome} />
+                            </Button>
+                        </div>
                         <div className={cx('nav')}>
                             <ul>
                                 <li>
                                     <Button to="/phim" textH>
-                                        Phim
+                                        PHIM
                                     </Button>
                                 </li>
                                 <li>
                                     <Button to="/lichchieu" text>
-                                        lich chieu
+                                        LỊCH CHIẾU
                                     </Button>
                                 </li>
                                 <li>
                                     <Button to="/hotro" text>
-                                        Rap gia
+                                        RẠP GIÁ
                                     </Button>
                                 </li>
                                 <li>
                                     <Button to="/hotro" text>
-                                        Gioi thieu
+                                        GIỚI THIỆU
                                     </Button>
                                 </li>
                                 <li>
                                     <Button to="/hotro" text>
-                                        Gioi thieu
+                                        GIỚI THIỆU
                                     </Button>
                                 </li>
                                 <li>
                                     <Button to="/hotro" textF>
-                                        Ho tro
+                                        HỖ TRỢ
                                     </Button>
                                 </li>
                             </ul>
