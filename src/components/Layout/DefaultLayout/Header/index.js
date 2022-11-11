@@ -1,10 +1,18 @@
 import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass, faUser, faHome } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCircleXmark,
+    faSpinner,
+    faMagnifyingGlass,
+    faUser,
+    faHome,
+    faRightFromBracket,
+} from '@fortawesome/free-solid-svg-icons';
 import 'tippy.js/dist/tippy.css';
 
-import Tippy from '@tippyjs/react/headless';
+import HeadlessTippy from '@tippyjs/react/headless';
+import Tippy from '@tippyjs/react';
 import styles from './Header.module.scss';
 import { Wrapper as PopupWrapper } from '~/components/Popper';
 import Button from '~/components/Button';
@@ -13,6 +21,7 @@ import images from '~/assets/images';
 const cx = classNames.bind(styles);
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
+    const currentUser = true;
     useEffect(() => {
         setTimeout(() => {
             setSearchResult([1, 2, 3]);
@@ -29,7 +38,7 @@ function Header() {
                 <div className={cx('right-header')}>
                     <div className={cx('facilities-nav')}>
                         <div className={cx('search')}>
-                            <Tippy
+                            <HeadlessTippy
                                 interactive
                                 visible={searchResult.length > 0}
                                 render={(attrs) => (
@@ -41,26 +50,36 @@ function Header() {
                                 )}
                             >
                                 <input placeholder="Tìm kiếm..." spellCheck={false} />
-                            </Tippy>
+                            </HeadlessTippy>
                             {/* <button className={cx('clear')}>
                                 <FontAwesomeIcon icon={faSpinner} />
                             </button> */}
                             <FontAwesomeIcon className={cx('loading')} icon={faCircleXmark} />
 
-                            <Tippy>
+                            <Tippy delay={[0, 200]} content="Tìm">
                                 <button className={cx('search-btn')}>
                                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                                 </button>
                             </Tippy>
                         </div>
+                        {currentUser ? (
+                            <div className={cx('current-user')}>
+                                <FontAwesomeIcon icon={faUser} />
+                                <a href="#"> Xin chào,</a>
 
-                        <div className={cx('login')}>
-                            <FontAwesomeIcon icon={faUser} />
+                                <Button primary to="/#">
+                                    <FontAwesomeIcon icon={faRightFromBracket} />
+                                </Button>
+                            </div>
+                        ) : (
+                            <div className={cx('login')}>
+                                <FontAwesomeIcon icon={faUser} />
 
-                            <Button primary to="/dangnhap">
-                                Đăng nhập
-                            </Button>
-                        </div>
+                                <Button primary to="/dangnhap">
+                                    Đăng nhập
+                                </Button>
+                            </div>
+                        )}
 
                         {/* <Button primary>EN</Button> */}
                     </div>

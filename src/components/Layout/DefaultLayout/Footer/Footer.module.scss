@@ -13,7 +13,6 @@
     padding-top: 46px;
 }
 .logo-footer {
-    background-color: blue;
 }
 .wrap {
     display: flex;
@@ -26,6 +25,10 @@
     display: inline-block;
     margin: 0 30px;
     vertical-align: top;
+    text-align: center;
+}
+.sytems {
+    display: inline-block;
     text-align: center;
 }
 h2 {

@@ -13,33 +13,75 @@ function Footer() {
                 <div className={cx('wrap')}>
                     <div className={cx('social')}>
                         <h2>LIÊN KẾT</h2>
-                        <h3>hinh</h3>
+                        <div>
+                            <img src={images.facebook} />
+                            <img src={images.youtube} />
+                        </div>
                         <h2>HOTLINE</h2>
                         <h1>0362123456</h1>
                     </div>
-                    <div className={cx('social')}>
+                    <div className={cx('sytems')}>
                         <h2>HỆ THỐNG RẠP</h2>
-                        <h3>hinh</h3>
-                        <h2>HOTLINE</h2>
-                        <h1>0362123456</h1>
+                        <div>
+                            <a href="#"> Rạp Hồ Chí Minh</a>
+                        </div>
+                        <div>
+                            <a href="#"> Rạp Hà Nội</a>
+                        </div>
+                        <div>
+                            <a href="#"> Rạp Đà Nẵng</a>
+                        </div>
+                        <div>
+                            <a href="#"> Rạp Bình Dương</a>
+                        </div>
                     </div>
                     <div className={cx('social')}>
                         <h2>RẠP CHIẾU</h2>
-                        <h3>hinh</h3>
-                        <h2>HOTLINE</h2>
-                        <h1>0362123456</h1>
+                        <div>
+                            <a href="#"> Phim đang chieu</a>
+                        </div>
+                        <div>
+                            <a href="#"> Phim sắp chieu</a>
+                        </div>
+                        <div>
+                            <a href="#"> Suất chiếu đặc biệt</a>
+                        </div>
+                        <div>
+                            <a href="#"> Lịch chiếu</a>
+                        </div>
+                        <div>
+                            <a href="#"> Khuyến mãi</a>
+                        </div>
                     </div>
                     <div className={cx('social')}>
                         <h2>THÔNG TIN</h2>
-                        <h3>hinh</h3>
-                        <h2>HOTLINE</h2>
-                        <h1>0362123456</h1>
+                        <div>
+                            <a href="#"> Giới thiệu</a>
+                        </div>
+                        <div>
+                            <a href="#"> tin tức</a>
+                        </div>
+                        <div>
+                            <a href="#"> Hỏi và đáp</a>
+                        </div>
+                        <div>
+                            <a href="#"> Liên hệ</a>
+                        </div>
                     </div>
                     <div className={cx('social')}>
                         <h2>CHÍNH SÁCH VÀ QUY ĐỊNH</h2>
-                        <h3>hinh</h3>
-                        <h2>HOTLINE</h2>
-                        <h1>0362123456</h1>
+                        <div>
+                            <a href="#"> Quy định chung</a>
+                        </div>
+                        <div>
+                            <a href="#"> Điều khoản giao dịch</a>
+                        </div>
+                        <div>
+                            <a href="#"> Chính sách bảo mật</a>
+                        </div>
+                        <div>
+                            <a href="#"> Thông tin công ty</a>
+                        </div>
                     </div>
                 </div>
                 <div className={cx('ul-footer')}>

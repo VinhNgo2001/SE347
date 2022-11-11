@@ -5,5 +5,7 @@ const images = {
     visa: require('~/assets/images/payment-visa.png'),
     mastercard: require('~/assets/images/payment-mastercard.png'),
     momo: require('~/assets/images/momo.jpg'),
+    facebook: require('~/assets/images/scl_facebook.png'),
+    youtube: require('~/assets/images/scl_youtube.png'),
 };
 export default images;
