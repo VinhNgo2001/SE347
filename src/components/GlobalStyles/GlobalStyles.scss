@@ -1,7 +1,7 @@
 @import 'normalize.css';
 
 :root {
-    --default-layout-header-height: 130px;
+    --default-layout-header-height: 135px;
     --default-layout-header-width: 1300px;
 }
 html {
@@ -13,6 +13,7 @@ html {
     padding: 0;
 }
 body {
+    font-family: 'avantgarde-demi', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -26,4 +27,9 @@ input,
 a[href] {
     text-decoration: none;
     color: white;
+}
+// Fonts embeded
+@font-face {
+    font-family: avantgarde-demi;
+    src: url('/assets/fonts/avantgdemi.woff');
 }
